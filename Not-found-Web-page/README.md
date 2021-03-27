@@ -13,7 +13,7 @@ This is the first project in front-end practices, where I implemented a 404 erro
 
 ## Screenshot:
 
-![](https://i.imgur.com/ggoYPWA.png)
+![](https://i.imgur.com/ggoYPWA.png)  ![](https://i.imgur.com/zmkoKiZ.png)
 
 <br>
 
