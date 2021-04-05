@@ -8,7 +8,7 @@ This a front-end practice project, my team web page is developed with pure HTML 
 
 ### Screenshot:
 
-![]()  ![]()
+![](https://i.imgur.com/RrsePsc.png)  ![](https://i.imgur.com/kC3NNjv.png) ![](https://i.imgur.com/1ivhPDc.png)
 
 <br><br>
 

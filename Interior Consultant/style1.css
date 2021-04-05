@@ -27,7 +27,6 @@ body {
 
 .container {
     width: 90vw;
-    min-height: 100vh;
     margin: 0 auto;
     padding: 0;
 }
@@ -114,7 +113,7 @@ body {
     justify-content: space-between;
     padding: 8rem 0;
     margin: 0 auto;
-    min-height: 80vh;
+    min-height: 100vh;
 }
 
 .design {
@@ -228,7 +227,7 @@ body {
 @media (max-width: 768px) {
 
     .wrapper {
-        min-height: 80vh;
+        min-height: 100vh;
         flex-direction: column;
         align-items: center;
         margin: 0 auto;
@@ -237,7 +236,76 @@ body {
 
     .nav__list {
         display: none;
-        height: 100vh;
+        min-height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        padding: 0;
+        margin: 0 auto;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #181719;
+        transition: top 1s ease;
+    }
+
+    .nav__item {
+        margin: 1rem 0;
+    }
+
+    .nav__list .closeMenu {
+        display: block;
+        position: absolute;
+        top: 60px;
+        right: 40px;
+    }
+
+    .openMenu {
+        display: block;
+    }
+
+    .nav__item + .nav__item {
+        margin-left: 0rem;
+    }
+
+    .design, .modern {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .design {
+        padding-bottom: 8rem;
+    }
+
+    .designer-card {
+        margin: 0 auto;
+        width: 55%;
+        right: 7%;
+        min-width: 280px;
+    }
+    .modern {
+        padding-bottom: 4rem;
+    }
+
+    .parag {
+        width: 90%;
+    }
+}
+
+@media (max-width: 375px) {
+    .wrapper {
+        min-height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .nav__list {
+        display: none;
+        min-height: 100vh;
         position: fixed;
         top: 0;
         right: 0;
