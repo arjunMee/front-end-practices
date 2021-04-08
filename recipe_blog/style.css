@@ -1,0 +1,317 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --title-font: 'Playfair Display', serif;
+    --content-font: 'Montserrat', sans-serif;
+    --icon-background-color: #F2994A;
+}
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+.container {
+    background-color: #FFF;
+    padding: 0;
+    margin: 0 auto;
+    min-height: 100vh;
+    width: 75%;
+}
+
+.intro {
+    margin: 3rem 0;
+}
+
+.about {
+    margin: 3rem 0;
+}
+
+.title {
+    margin: 1rem auto;
+    font-family: var(--title-font);
+    font-weight: 700;
+    font-size: 3em;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+
+.about__word {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-family: var(--content-font);
+    font-style: italic;
+    font-size: .9rem;
+    color:dimgray;
+    width: 65%;
+    padding: 0;
+    margin: 0 auto 0 0;
+}
+
+.about__word p {
+    margin: 0 0 0 1rem;
+}
+
+.cheesecake {
+    max-width: 100%;
+    height: auto;
+}
+
+.main-content {
+    display: flex;
+}
+
+.recipe {
+    width: 75%;
+    margin-right: 8rem;
+    color: #333333;
+}
+
+.cake {
+    font-family: var(--title-font);
+    text-transform: capitalize;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.texto {
+    display: block;
+    margin: -1.7rem 0 .5rem 2rem;
+    font-size: 1rem;
+    font-family: var(--content-font);
+    font-weight: 400;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.instructions {
+    margin: 2rem 0 5rem 0;
+    padding: 0;
+}
+
+.list {
+    padding: 0;
+    counter-reset: list-style;
+    list-style: none;
+}
+
+li {
+    counter-increment: list-style;
+}
+
+li::before {
+    content: counter(list-style);
+    background-color: #F2994A;
+    color: #FFF;
+    padding: .5rem .7rem;
+    border-radius: 7px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+li::before:hover {
+    opacity: 0.4;
+}
+
+.instr {
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.sub-title-one {
+    margin-top: 0;
+    font-family: var(--title-font);
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+}
+
+.menu {
+    width: 28%;
+    border-radius: 12px;
+    height: 350px;
+    box-shadow:
+        0 1.8px 2.2px rgba(0, 0, 0, 0.055),
+        0 3.9px 5.3px rgba(0, 0, 0, 0.062),
+        0 6.1px 10px rgba(0, 0, 0, 0.064),
+        0 8.6px 17.9px rgba(0, 0, 0, 0.069),
+        0 11.4px 33.4px rgba(0, 0, 0, 0.081),
+        0 15px 80px rgba(0, 0, 0, 0.13);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.param {
+    padding: 1rem 0;
+}
+
+.param {
+    display: flex;
+}
+
+.icon {
+    align-self: center;
+    color: #4F4F4F;
+    font-size: 1.7rem;
+}
+
+.legend p{
+    margin: 0 .9rem;
+}
+
+.menu .param:nth-of-type(3)  {
+    margin-right: 1rem;
+}
+
+.orange {
+    color: var(--icon-background-color);
+}
+
+.disable-text {
+    color: #BDBDBD;
+    font-family: var(--content-font);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: .65rem;
+}
+
+.legend p + p {
+    font-family: var(--content-font);
+    font-weight: 500;
+    font-size: .9rem;
+}
+
+.copyright-footer {
+    text-align: center;
+    margin-top: auto;
+    padding: 5rem 0 1rem 0;
+    width: 100%;
+    font-size: 0.8em;
+}
+
+.contact {
+    text-decoration: none;
+    color: #1DA1F2;
+}
+
+@media (max-width: 900px) {
+
+    .main-content {
+        flex-direction: column-reverse;
+        width: 90vw;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .about__word p {
+        min-width: 70vw;
+    }
+
+    .title {
+        font-size: 2.3em;
+    }
+
+    .recipe {
+        margin: 0;
+        width: 100%;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 90vw;
+        height:200px;
+        padding: 1rem;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+
+    .param {
+        white-space: nowrap;
+        align-items: flex-start;
+    }
+
+    .param:nth-of-type(1) {
+        width: 100vw;
+    }
+
+    .menu .param:nth-of-type(3)  {
+        margin-right: 0;
+    }
+
+    .legend p{
+        margin: 0.5rem;
+    }
+
+    .icon {
+        font-size: 2.7vmax;
+    }
+
+    .disable-text {
+        font-size: 1.3vmax;
+    }
+
+    .legend p + p {
+        font-size: 1.6vmax;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.7em;
+    }
+
+    .menu {
+        padding: 0.5rem;
+    }
+}
+
+
+@media (max-width: 375px) {
+    .title {
+        font-size: 1.5em;
+    }
+
+    .icon {
+        font-size: 1.2rem;
+    }
+
+    .disable-text {
+        font-size: .7rem;
+    }
+
+    .legend p + p{
+        font-size: .7rem;
+        margin-right: .5rem;
+    }
+
+    .menu .param:nth-of-type(3)  {
+        margin-right: 0;
+    }
+    .legend p{
+        margin: 0.5rem;
+    }
+}
