@@ -11,17 +11,17 @@ This a front-end practice project, my team web page is developed with pure HTML,
 
 #### Desktop viewport:
 
-![](https://imgur.com/ZKNX735)
+![](https://imgur.com/ZKNX735.png)
 
 
 #### Ipad viewport:
 
-![](https://imgur.com/SVwuZDZ)
+![](https://imgur.com/SVwuZDZ.png)
 
 
 #### Mobile viewport:
 
-![](https://imgur.com/FBLnn5Y)
+![](https://imgur.com/FBLnn5Y.png)
 
 
 You can also visualise on [codepen](https://codepen.io/Boul3ez/full/abpMLZz)
