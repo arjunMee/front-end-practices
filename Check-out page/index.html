@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="a form to check out user information">
+        <title>Check-out form</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.1/css/all.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="normalize.css">
+    </head>
+    <body>
+        <main class="container">
+            <!--check-out section-->
+            <section class="checking-form">
+                <header>
+                    <h1 class="title">checkout</h1>
+                </header>
+                <form action="#">
+                    <div class="information">
+                        <p class="information--contact">Contact information</p>
+                        <div class="form-field">
+                            <label for="your_email" class="form-field--title label__title"><small>E-mail</small>
+                                <span class="fa fa-envelope"></span>
+                                <input type="email" id="your_email" class="form-field--input" name="email" placeholder="Enter your email..." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                            </label>
+                        </div>
+                        
+                        <div class="form-field">
+                            <label for="phone" class="form-field--title label__title"><small>Phone</small>
+                                <span class="fa fa-phone"></span>
+                                <input type="tel" id="phone" class="form-field--input" name="phone" placeholder="Enter your phone..." pattern="[0-9]{2,}-[0-9]{3,}-[0-9]{3,}" required>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="address">
+                        <p class="address--contact">Shipping address</p>
+                        <div class="form-field">
+                            <label for="your_name" class="form-field--title label__title"><small>Full name</small>
+                                <span class="fa fa-user-circle"></span>
+                                <input type="text" id="your_name" class="form-field--input" name="name" placeholder="Enter your name..." pattern="[A-Za-z]" minlength="10" required>
+                            </label>
+                        </div>
+                        <div class="form-field">
+                            <label for="your_address" class="form-field--title label__title"><small>Address</small>
+                                <span class="fa fa-home"></span>
+                                <input type="text" id="your_address" class="form-field--input" name="address" placeholder="Your address..." pattern="[A-Za-z0-9]{4,}" required>
+                            </label>
+                        </div>
+                        <div class="form-field">
+                            <label for="your_city" class="form-field--title label__title"><small>City</small>
+                                <span class="fa fa-building"></span>
+                                <input type="text" id="your_city" class="form-field--input" name="city" placeholder="Your city..." pattern="[A-Za-z0-9]{4,}" required>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="inline-input">
+                        <div class="form-field">
+                            <label for="country" class="form-field--title label__title"><small>Country</small></label>
+                            <div class="select">
+                                <span><i class="fa fa-globe-africa"></i></span>
+                                <select name="country" id="country">
+                                    <option disabled selected value>Your country...</option>
+                                    <option>Afghanistan</option>
+                                    <option>Albania</option>
+                                    <option>Algeria</option>
+                                    <option>Andorra</option>
+                                    <option>Angola</option>
+                                    <option>Antigua and Barbuda</option>
+                                    <option>Argentina</option>
+                                    <option>Armenia</option>
+                                    <option>Australia</option>
+                                    <option>Austria</option>
+                                    <option>Azerbaijan</option>
+                                    <option>Bahamas</option>
+                                    <option>Bahrain</option>
+                                    <option>Bangladesh</option>
+                                    <option>Barbados</option>
+                                    <option>Belarus</option>
+                                    <option>Belgium</option>
+                                    <option>Belize</option>
+                                    <option>Benin</option>
+                                    <option>Bhutan</option>
+                                    <option>Bolivia</option>
+                                    <option>Bosnia and Herzegovina</option>
+                                    <option>Botswana</option>
+                                    <option>Brazil</option>
+                                    <option>Brunei</option>
+                                    <option>Bulgaria</option>
+                                    <option>Burkina Faso</option>
+                                    <option>Burundi</option>
+                                    <option>Côte d'Ivoire</option>
+                                    <option>Cabo Verde</option>
+                                    <option>Cambodia</option>
+                                    <option>Cameroon</option>
+                                    <option>Canada</option>
+                                    <option>Central African Republic</option>
+                                    <option>Chad</option>
+                                    <option>Chile</option>
+                                    <option>China</option>
+                                    <option>Colombia</option>
+                                    <option>Comoros</option>
+                                    <option>Congo (Congo-Brazzaville)</option>
+                                    <option>Costa Rica</option>
+                                    <option>Croatia</option>
+                                    <option>Cuba</option>
+                                    <option>Cyprus</option>
+                                    <option>Czechia (Czech Republic)</option>
+                                    <option>Democratic Republic of the Congo 	</option>
+                                    <option>Denmark</option>
+                                    <option>Djibouti</option>
+                                    <option>Dominica</option>
+                                    <option>Dominican Republic</option>
+                                    <option>Ecuador</option>
+                                    <option>Egypt</option>
+                                    <option>El Salvador</option>
+                                    <option>Equatorial Guinea</option>
+                                    <option>Eritrea</option>
+                                    <option>Estonia</option>
+                                    <option>Eswatini (fmr. "Swaziland")</option>
+                                    <option>Ethiopia</option>
+                                    <option>Fiji</option>
+                                    <option>Finland</option>
+                                    <option>France</option>
+                                    <option>Gabon</option>
+                                    <option>Gambia</option>
+                                    <option>Georgia</option>
+                                    <option>Germany</option>
+                                    <option>Ghana</option>
+                                    <option>Greece</option>
+                                    <option>Grenada</option>
+                                    <option>Guatemala</option>
+                                    <option>Guinea</option>
+                                    <option>Guinea-Bissau</option>
+                                    <option>Guyana</option>
+                                    <option>Haiti</option>
+                                    <option>Holy See</option>
+                                    <option>Honduras</option>
+                                    <option>Hungary</option>
+                                    <option>Iceland</option>
+                                    <option>India</option>
+                                    <option>Indonesia</option>
+                                    <option>Iran</option>
+                                    <option>Iraq</option>
+                                    <option>Ireland</option>
+                                    <option>Israel</option>
+                                    <option>Italy</option>
+                                    <option>Jamaica</option>
+                                    <option>Japan</option>
+                                    <option>Jordan</option>
+                                    <option>Kazakhstan</option>
+                                    <option>Kenya</option>
+                                    <option>Kiribati</option>
+                                    <option>Kuwait</option>
+                                    <option>Kyrgyzstan</option>
+                                    <option>Laos</option>
+                                    <option>Latvia</option>
+                                    <option>Lebanon</option>
+                                    <option>Lesotho</option>
+                                    <option>Liberia</option>
+                                    <option>Libya</option>
+                                    <option>Liechtenstein</option>
+                                    <option>Lithuania</option>
+                                    <option>Luxembourg</option>
+                                    <option>Madagascar</option>
+                                    <option>Malawi</option>
+                                    <option>Malaysia</option>
+                                    <option>Maldives</option>
+                                    <option>Mali</option>
+                                    <option>Malta</option>
+                                    <option>Marshall Islands</option>
+                                    <option>Mauritania</option>
+                                    <option>Mauritius</option>
+                                    <option>Mexico</option>
+                                    <option>Micronesia</option>
+                                    <option>Moldova</option>
+                                    <option>Monaco</option>
+                                    <option>Mongolia</option>
+                                    <option>Montenegro</option>
+                                    <option>Morocco</option>
+                                    <option>Mozambique</option>
+                                    <option>Myanmar (formerly Burma)</option>
+                                    <option>Namibia</option>
+                                    <option>Nauru</option>
+                                    <option>Nepal</option>
+                                    <option>Netherlands</option>
+                                    <option>New Zealand</option>
+                                    <option>Nicaragua</option>
+                                    <option>Niger</option>
+                                    <option>Nigeria</option>
+                                    <option>North Korea</option>
+                                    <option>North Macedonia</option>
+                                    <option>Norway</option>
+                                    <option>Oman</option>
+                                    <option>Pakistan</option>
+                                    <option>Palau</option>
+                                    <option>Palestine State</option>
+                                    <option>Panama</option>
+                                    <option>Papua New Guinea</option>
+                                    <option>Paraguay</option>
+                                    <option>Peru</option>
+                                    <option>Philippines</option>
+                                    <option>Poland</option>
+                                    <option>Portugal</option>
+                                    <option>Qatar</option>
+                                    <option>Romania</option>
+                                    <option>Russia</option>
+                                    <option>Rwanda</option>
+                                    <option>Saint Kitts and Nevis</option>
+                                    <option>Saint Lucia</option>
+                                    <option>Saint Vincent and the Grenadines</option>
+                                    <option>Samoa</option>
+                                    <option>San Marino</option>
+                                    <option>Sao Tome and Principe</option>
+                                    <option>Saudi Arabia</option>
+                                    <option>Senegal</option>
+                                    <option>Serbia</option>
+                                    <option>Seychelles</option>
+                                    <option>Sierra Leone</option>
+                                    <option>Singapore</option>
+                                    <option>Slovakia</option>
+                                    <option>Slovenia</option>
+                                    <option>Solomon Islands</option>
+                                    <option>Somalia</option>
+                                    <option>South Africa</option>
+                                    <option>South Korea</option>
+                                    <option>South Sudan</option>
+                                    <option>Spain</option>
+                                    <option>Sri Lanka</option>
+                                    <option>Sudan</option>
+                                    <option>Suriname</option>
+                                    <option>Sweden</option>
+                                    <option>Switzerland</option>
+                                    <option>Syria</option>
+                                    <option>Tajikistan</option>
+                                    <option>Tanzania</option>
+                                    <option>Thailand</option>
+                                    <option>Timor-Leste</option>
+                                    <option>Togo</option>
+                                    <option>Tonga</option>
+                                    <option>Trinidad and Tobago</option>
+                                    <option>Tunisia</option>
+                                    <option>Turkey</option>
+                                    <option>Turkmenistan</option>
+                                    <option>Tuvalu</option>
+                                    <option>Uganda</option>
+                                    <option>Ukraine</option>
+                                    <option>United Arab Emirates</option>
+                                    <option>United Kingdom</option>
+                                    <option>United States of America</option>
+                                    <option>Uruguay</option>
+                                    <option>Uzbekistan</option>
+                                    <option>Vanuatu</option>
+                                    <option>Venezuela</option>
+                                    <option>Vietnam</option>
+                                    <option>Yemen</option>
+                                    <option>Yemen</option>
+                                    <option>Zimbabwe</option>
+                                </select>
+                                <span class="focus"></span>
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label for="postal_code" class="form-field--title label__title"><small>Postal code</small>
+                                <span class="fa fa-mail-bulk"></span>
+                                <input type="text" id="postal_code" class="form-field--input" name="postal code" placeholder="Your postal code..." pattern="(\d{5}([\-]\d{4})?)" required>
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" class="form-checkbox" value="information" name="choose"><small class="form-checkbox--legend">save this information for the next time</small>
+                        </label>
+                    </div>
+                    <div class="btn">
+                        <button class="checking-form--submit">continue</button>
+                    </div>
+                </form>
+            </section>
+            <!--product purchase section-->
+            <section class="purchase">
+                <div class="purchase--product">
+                    <div class="purchase--product-img">
+                        <img src="img/photo1.png" alt="backbag photo" class="back-bag">
+                    </div>
+                    <div class="purchase--product-price">
+                        <div class="details">
+                            <p class="product">Vintage Backbag</p>
+                            <div class="price">
+                                <span id="new-price">$54.99</span>
+                                <span id="old-price"><small>$94.99</small></span>
+                            </div>
+                            <div class="unit">
+                                <span class="decrease unit--sign remove-prod_1">-</span><span class="display_1 unit--sign">1</span><span class="increase unit--sign add-prod_1">+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="purchase--product">
+                    <div class="purchase--product-img">
+                        <img src="img/photo2.png" alt="shoes photo" class="shoes">
+                    </div>
+                    <div class="purchase--product-price">
+                        <div class="details">
+                            <p class="product">Levi shoes</p>
+                            <div class="price">
+                                <span id="new-price">$54.99</span>
+                                <span id="old-price"><small>$94.99</small></span>
+                            </div>
+                            <div class="unit">
+                                <span class="decrease unit--sign remove-prod_2">-</span><span class="display_2 unit--sign">1</span><span class="increase unit--sign add-prod_2">+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="purchase--total-price">
+                    <div class="shipping--price">
+                        <span class="purchase--title">Shipping</span>
+                        <span class="pricing">$19</span>
+                    </div>
+                    <div class="total--price">
+                        <span class="purchase--title">Total</span>
+                        <span class="pricing">$148.98</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="copyright-footer">created by <a href="https://twitter.com/benrebahmoez1" class="contact" target="_blank" rel="noopener" >Moez Ben Rebah</a> - devChallenges.io</footer>
+        <script src="main.js"></script>
+    </body>
+</html>
