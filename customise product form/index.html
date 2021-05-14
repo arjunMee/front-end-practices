@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Store Devis</title>
+        <link rel="icon" type="assets/png" href="assets/favicon-32x32.png">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="normalize.css">
+    </head>
+    <body>
+        <main class="container">
+            <div class="intro">
+                <header>
+                    <h1>Personnaliser votre Store sur mesure</h1>
+                </header>
+                <div class="store">
+                    <img src="assets/SSM_Structure.png" alt="store image" width="350" height="350">
+                </div>
+            </div>
+            <!--store customization section-->
+            <section class="customize">
+                <div class="customize--sub_categorie">
+                    <div class="customize--sub_title">
+                        <p class="symbol">1</p>
+                        <h2>personnaliser la structure</h2>
+                    </div>
+                    <div class="customize--structure">
+                        <div class="customize--structure_field">
+                            <h4 class="field--title">Dimensions <span id="legend">A</span> et <span id="legend">B</span></h4>
+                            <input type="text" name="mesures" id="mesures" placeholder="Exp: 2000 x 1100" maxlength="11" required>
+                        </div>
+                        <div class="customize--structure_field">
+                            <h4 class="field--title">Couleur de mécanisme</h4>
+                            <div class="field--select_color choice">
+                                <div class="first_color">
+                                    <img src="assets/orange.png" alt="image de couleur orange" width="80" height="80">
+                                    <p class="desc">Orange</p>
+                                </div>
+                                <div class="second_color">
+                                    <img src="assets/gris.jpg" alt="image de couleur orange" width="80" height="80">
+                                    <p class="desc">Gris</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customize--structure_field">
+                            <h4 class="field--title">Personnaliser le lamberquin <span id="legend">D</span></h4>
+                            <div class="field--select_shape choice">
+                                <div class="first_shape">
+                                    <img src="assets/lambrequin-icon-vague.png" alt="image de store avec lamberquin forme de vague" width="100" height="100">
+                                    <p class="desc">Grande vague 24 cm</p>
+                                </div>
+                                <div class="second_shape">
+                                    <img src="assets/lambrequin-icon-droit.png" alt="image de store avec lamberquin forme droit" width="100" height="100">
+                                    <p class="desc">Droit 24 cm</p>
+                                </div>
+                                <div class="third_shape">
+                                    <img src="assets/lambrequin-icon-sans.png" alt="image de store sans lamberquin" width="100" height="100">
+                                    <p class="desc">Standard/Sans</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customize--structure_field">
+                            <h4 class="field--title">Personnaliser la Fixation</h4>
+                            <div class="choice">
+                                <div class="first_fix">
+                                    <img src="assets/fixation-mur.png" alt="image de fixation store au mur" width="100" height="100">
+                                    <p class="desc">Murale sur Façade</p>
+                                </div>
+                                <div class="second_fix">
+                                    <img src="assets/fixation-plafond.png" alt="image de fixation store au plafond" width="100" height="100">
+                                    <p class="desc">Plafond (avec équerres)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customize--structure_field">
+                            <h4 class="field--title">Personnaliser les bras avec leds</h4>
+                            <div class="field--select">
+                                <select name="leds" id="choose-leds">
+                                    <option disabled selected>-- Fiates un choix --</option>
+                                    <option>Sans</option>
+                                    <option>Leds intégrés sur les bras +499€</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="customize--sub_categorie">
+                    <div class="customize--sub_title">
+                        <p class="symbol">2</p>
+                        <h2>personnaliser la toile</h2>
+                    </div>
+                    <div class="customize--motif_field ">
+                        <div class="customize--motif">
+                            <h4 class="field--title">Motif</h4>
+                            <div class="customize--motif_categories choice">
+                                <div class="first_motif">
+                                    <a href="#">
+                                        <img src="assets/toile-motif-uni.jpg" alt="image de motif de couleur uni" width="60" height="60">
+                                    </a>
+                                    <p class="desc">Uni</p>
+                                </div>
+                                <div class="second_motif">
+                                    <a href="#">
+                                        <img src="assets/toile-motif-rayures.jpg" alt="image de motif de couleur rayures" width="60" height="60">
+                                    </a>
+                                    <p class="desc">Rayures</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customize--color">
+                            <h4 class="field--title">Couleur</h4>
+                            <div class="carousel choice">
+                                <div class="carousel__button carousel__button--left">
+                                    <i class="fa fa-chevron-circle-left"></i>
+                                </div>
+                                <div class="carousel__track-container choice">
+                                    <ul class="carousel__track">
+                                        <li class="carousel__slide">
+                                            <img src="assets/gris.jpg" alt="slide" width="100" height="100">
+                                        </li>
+                                        <li class="carousel__slide">
+                                            <img src="assets/gris.jpg" alt="slide" width="100" height="100">
+                                        </li>
+                                        <li class="carousel__slide">
+                                            <img src="assets/gris.jpg" alt="slide" width="100" height="100">
+                                        </li>
+                                    </ul>
+                                    <ul class="carousel__track">
+                                        <li class="carousel__slide">
+                                            <img src="assets/gris.jpg" alt="slide" width="100" height="100">
+                                        </li>
+                                        <li class="carousel__slide">
+                                            <img src="assets/gris.jpg" alt="slide" width="100" height="100">
+                                        </li>
+                                        <li class="carousel__slide">
+                                            <img src="assets/gris.jpg" alt="slide" width="100" height="100">
+                                        </li>
+                                    </ul>
+                                    <ul class="carousel__track">
+                                        <li class="carousel__slide">
+                                            <img src="assets/gris.jpg" alt="slide" width="100" height="100">
+                                        </li>
+                                        <li class="carousel__slide">
+                                            <img src="assets/gris.jpg" alt="slide" width="100" height="100">
+                                        </li>
+                                        <li class="carousel__slide">
+                                            <img src="assets/gris.jpg" alt="slide" width="100" height="100">
+                                        </li>
+                                    </ul>
+                                    <ul class="carousel__track">
+                                        <li class="carousel__slide">
+                                            <img src="assets/gris.jpg" alt="slide" width="100" height="100">
+                                        </li>
+                                        <li class="carousel__slide">
+                                            <img src="assets/gris.jpg" alt="slide" width="100" height="100">
+                                        </li>
+                                        <li class="carousel__slide">
+                                            <img src="assets/gris.jpg" alt="slide" width="100" height="100">
+                                        </li>
+                                    </ul>
+                                    <ul class="carousel__track">
+                                        <li class="carousel__slide">
+                                            <img src="assets/gris.jpg" alt="slide" width="100" height="100">
+                                        </li>
+                                        <li class="carousel__slide">
+                                            <img src="assets/gris.jpg" alt="slide" width="100" height="100">
+                                        </li>
+                                        <li class="carousel__slide">
+                                            <img src="assets/gris.jpg" alt="slide" width="100" height="100">
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="carousel__button carousel__button--left">
+                                    <i class="fa fa-chevron-circle-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="customize--sub_categorie">
+                    <div class="customize--sub_title">
+                        <p class="symbol">3</p>
+                        <h2>personnaliser la motorisation</h2>
+                    </div>
+                    <div class="customize--command_field">
+                        <h4 class="field--title">Personnaliser la coté de la commande</h4>
+                        <div class="choice">
+                            <div class="command_direction--left">
+                                <img src="assets/commande-gauche.png" alt="image de telecommande coté gauche" width="120" height="60">
+                                <p class="desc">Gauche</p>
+                            </div>
+                            <div class="command_direction--right">
+                                <img src="assets/commande-droite.png" alt="image de telecommande coté droite" width="120" height="60">
+                                <p class="desc">Droite</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="customize--command_field">
+                        <h4 class="field--title">Personnaliser le type de la commande</h4>
+                        <div class="command_direction--left">
+                            <img src="assets/telecommande.jpg" alt="image de telecommande">
+                            <p class="desc">telecommande</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="technic_description">
+                <div class="tabset">
+                    <!-- Tab 1 -->
+                    <input type="radio" name="tabset" id="tab1" aria-controls="description1" checked>
+                    <label for="tab1">Description 1</label>
+                    <!-- Tab 2 -->
+                    <input type="radio" name="tabset" id="tab2" aria-controls="description2">
+                    <label for="tab2">Description 2</label>
+                    <!-- Tab 3 -->
+                    <input type="radio" name="tabset" id="tab3" aria-controls="description3">
+                    <label for="tab3">Description 3</label>
+                    
+                    <div class="tab-panels">
+                        <section id="description1" class="tab-panel">
+                            <h2>1. Tab</h2>
+                            <p><strong>Lorem ipsum:</strong><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, consequuntur reprehenderit. Magnam harum totam fuga aspernatur, inventore voluptates laboriosam veniam numquam maxime consequatur optio nesciunt, recusandae impedit iure ea velit.</p>
+                        </section>
+                        <section id="description2" class="tab-panel">
+                            <h2>2. Tab</h2>
+                            <p><strong>Lorem ipsum:</strong><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut deserunt laboriosam sit corporis quas quibusdam beatae. Magni neque nulla eligendi debitis? Molestiae distinctio vel eveniet quia repellendus non exercitationem illum.</p>
+                        </section>
+                        <section id="description3" class="tab-panel">
+                            <h2>3. Tab</h2>
+                            <p><strong>Lorem ipsum:</strong><br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid soluta doloribus mollitia ab adipisci sunt vel a. Quia maxime pariatur aspernatur labore, vero itaque nobis necessitatibus obcaecati magni aperiam facilis?</p>
+                        </section>
+                    </div>
+                </div>
+            </section>
+            <!--user contact information-->
+            <section class="submit">
+                <form action="">
+                    <div class="label-field">
+                        <label for="first-name">
+                            <input type="text" name="first-name" id="first-name" placeholder="Votre Prénom" pattern="[A-Za-zÀ-ž\s]{3,}" maxlength="35" required>
+                        </label>
+                    </div>
+                    <div class="label-field">
+                        <label for="last-name">
+                            <input type="text" name="last-name" id="lasst-name" placeholder="Votre Nom" pattern="[A-Za-zÀ-ž\s]{3,}" maxlength="35" required>
+                        </label>
+                    </div>
+                    <div class="label-field">
+                        <label for="email">
+                            <input type="text" name="email" id="email" placeholder="exp. votremail@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" maxlength="55" required>
+                        </label>
+                    </div>
+                    <div class="btn">
+                        <button class="checking-form--submit">Demandez votre devis</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <script src="index.js"></script>
+    </body>
+</html>
