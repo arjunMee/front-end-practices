@@ -96,6 +96,13 @@ h2 {
     color: #FFF;
 }
 
+
+#item-carousel {
+    width: 640px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
 .carousel__track {
     list-style-type: none;
     margin: 0 auto;
