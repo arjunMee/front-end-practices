@@ -62,19 +62,33 @@ h2 {
     padding-left: 1rem;
 }
 
+#legend {
+    color: #06c;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 .customize--structure_field {
     margin: 6rem auto;
 }
 
-.desc {
+.field--title {
+    margin-bottom: 3rem;
+}
+
+[class*="desc"] {
     font-family: 'Roboto Mono', monospace;
     font-weight: 400;
-    padding: .75rem .5rem;
+    padding: .5rem .5rem;
     cursor: pointer;
 }
 
-.desc:hover {
+[class*="desc"]:hover {
     border-bottom: rgb(29, 175, 0) 1px solid;
+}
+
+.desc1 {
+    margin-top: 0;
 }
 
 .green {
@@ -82,7 +96,31 @@ h2 {
     color: #FFF;
 }
 
+.carousel__track {
+    list-style-type: none;
+    margin: 0 auto;
+}
 
+.carousel__track:first-child {
+    padding-left: 0;
+}
+
+.carousel {
+    width: 100%;
+}
+
+.carousel__button {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.carousel__track {
+    padding-left: 20px;
+}
+
+.carousel__slide {
+    margin-bottom: 1rem;
+}
 
 /* Style the buttons inside the tab */
 .tabset > input[type="radio"] {

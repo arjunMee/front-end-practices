@@ -1,7 +1,11 @@
 // change background color when clicking on
-let switchBackgroundColor1 = document.querySelectorAll('.desc1')
-let switchBackgroundColor2 = document.querySelectorAll('.desc2')
-let switchBackgroundColor3 = document.querySelectorAll('.desc3')
+let switchBackgroundColor = document.querySelectorAll('.desc');;
+let switchBackgroundColor1 = document.querySelectorAll('.desc1');
+let switchBackgroundColor2 = document.querySelectorAll('.desc2');
+let switchBackgroundColor3 = document.querySelectorAll('.desc3');
+let switchBackgroundColor4 = document.querySelectorAll('.desc4');
+let switchBackgroundColor5 = document.querySelectorAll('.desc5');
+
 
 function remove(position) {
   position.forEach((single) => {
@@ -9,21 +13,39 @@ function remove(position) {
   })
 }
 
+switchBackgroundColor.forEach((box) => {
+  box.addEventListener('click', () => {
+    remove(switchBackgroundColor)
+    box.classList.add('green')
+  })
+});
 switchBackgroundColor1.forEach((box) => {
   box.addEventListener('click', () => {
     remove(switchBackgroundColor1)
     box.classList.add('green')
   })
-})
+});
 switchBackgroundColor2.forEach((box) => {
   box.addEventListener('click', () => {
     remove(switchBackgroundColor2)
     box.classList.add('green')
   })
-})
+});
 switchBackgroundColor3.forEach((box) => {
   box.addEventListener('click', () => {
     remove(switchBackgroundColor3)
+    box.classList.add('green')
+  })
+});
+switchBackgroundColor4.forEach((box) => {
+  box.addEventListener('click', () => {
+    remove(switchBackgroundColor4)
+    box.classList.add('green')
+  })
+});
+switchBackgroundColor5.forEach((box) => {
+  box.addEventListener('click', () => {
+    remove(switchBackgroundColor5)
     box.classList.add('green')
   })
 })
