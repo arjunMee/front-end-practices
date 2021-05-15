@@ -67,3 +67,17 @@ function openCity(evt, cityName) {
 
 // Get the element with id="defaultOpen" and click on it
 // document.getElementById('defaultOpen').click()
+
+
+const carousel = document.getElementById("item-carousel")
+const carouselPrevious = document.getElementById("previous-carousel-button")
+const carouselNext = document.getElementById("next-carousel-button")
+
+const width = window.getComputedStyle(carousel).getPropertyValue("width")
+
+carouselNext.onclick = () => {
+  carousel.scrollLeft += parseInt(width)
+}
+carouselPrevious.onclick = () => {
+  carousel.scrollLeft -= parseInt(width)
+}
