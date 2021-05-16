@@ -60,6 +60,8 @@ const carousel = document.getElementById("item-carousel");
 const carouselPrevious = document.getElementById("previous-carousel-button");
 const carouselNext = document.getElementById("next-carousel-button");
 const width = window.getComputedStyle(carousel).getPropertyValue("width");
+const plainFilter = document.getElementById("plain");
+const stripeFilter = document.getElementById("stripe");
 
 const images = [
   { image: "assets/toile/bleu_plain.jpg", type: "plain" },
@@ -126,7 +128,7 @@ function displayItems(filters) {
   carousel.innerHTML = "";
 
   const filteredImages = images.filter((image) => filters.includes(image.type));
-  const chunkedImages = chunkArray(filteredImages, 3);
+  const chunkedImages = chunkArray(filteredImages, 4);
 
   for (const track of chunkedImages) {
     const ul = document.createElement("ul");
@@ -147,31 +149,10 @@ function displayItems(filters) {
 }
 
 displayItems(["stripe", "plain"]);
+stripeFilter.addEventListener("click", () => displayItems(["stripe"]));
+plainFilter.addEventListener("click", () => displayItems(["plain"]));
 
-/*carousel.innerHTML = ""
 
-
-const chunkedImages = chunkArray(images, 4);
-
-for (const track of chunkedImages) {
-	const ul = document.createElement('ul');
-  ul.className = 'carousel__track';
-    
-	for (const { image } of track) {
-  	const li = document.createElement('li');
-    const img = document.createElement('img');
-
-    img.height = "100";
-    img.width = "100";
-    img.alt = "slide"
-    img.src = image;
-
-		li.append(img);
-    ul.append(li);
-  }
-  
-  carousel.append(ul);
-}*/
 
 // tab animation code
 function openCity(evt, cityName) {
