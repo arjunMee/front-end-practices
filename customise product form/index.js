@@ -18,6 +18,11 @@ function greenButton(greenButton) {
       remove(greenButton)
       box.classList.add('green')
       checker()
+      checker1()
+      checker2()
+      checker3()
+      checker4()
+      checker5()
     })
   })
 }
@@ -31,12 +36,71 @@ greenButton(switchBackgroundColor5)
 
 // display valid and not valid choices
 const checks = document.querySelectorAll('.checkbox')
-const tick1 = document.querySelector('.tick-check')
-
+const tick = document.querySelector('.tick-check')
+console.log(checks, tick)
 function checker() {
   checks.forEach((check) => {
-    tick1.classList.remove('fa-times')
-    if (check.classList.contains('green')) tick1.classList.add('fa-check')
+    if (check.classList.contains('green')) {
+      tick.classList.remove('fa-times')
+      tick.classList.add('fa-check')
+    }
+  })
+}
+
+const checks1 = document.querySelectorAll('.checkbox1')
+const tick1 = document.querySelector('.tick-check1')
+
+function checker1() {
+  checks1.forEach((check) => {
+    if (check.classList.contains('green')) {
+      tick1.classList.add('fa-check')
+      tick1.classList.remove('fa-times')
+    }
+  })
+}
+
+const checks2 = document.querySelectorAll('.checkbox2')
+const tick2 = document.querySelector('.tick-check2')
+
+function checker2() {
+  checks2.forEach((check) => {
+    if (check.classList.contains('green')) {
+      tick2.classList.add('fa-check')
+      tick2.classList.remove('fa-times')
+    }
+  })
+}
+const checks3 = document.querySelectorAll('.checkbox3')
+const tick3 = document.querySelector('.tick-check3')
+
+function checker3() {
+  checks3.forEach((check) => {
+    if (check.classList.contains('green')) {
+      tick3.classList.add('fa-check')
+      tick3.classList.remove('fa-times')
+    }
+  })
+}
+const checks4 = document.querySelectorAll('.checkbox4')
+const tick4 = document.querySelector('.tick-check4')
+
+function checker4() {
+  checks4.forEach((check) => {
+    if (check.classList.contains('green')) {
+      tick4.classList.add('fa-check')
+      tick4.classList.remove('fa-times')
+    }
+  })
+}
+const checks5 = document.querySelectorAll('.checkbox5')
+const tick5 = document.querySelector('.tick-check5')
+
+function checker5() {
+  checks5.forEach((check) => {
+    if (check.classList.contains('green')) {
+      tick5.classList.add('fa-check')
+      tick5.classList.remove('fa-times')
+    }
   })
 }
 
@@ -46,6 +110,8 @@ const carousel = document.getElementById('item-carousel')
 const carouselPrevious = document.getElementById('previous-carousel-button')
 const carouselNext = document.getElementById('next-carousel-button')
 const width = window.getComputedStyle(carousel).getPropertyValue('width')
+const plainFilter = document.getElementById('plain')
+const stripeFilter = document.getElementById('stripe')
 
 const images = [
   { image: 'assets/toile/bleu_plain.jpg', type: 'plain' },
@@ -97,9 +163,6 @@ carouselPrevious.onclick = () => {
   carousel.scrollLeft -= parseInt(width)
 }
 
-// clear out the content initially
-carousel.innerHTML = ''
-
 function chunkArray(arr, size) {
   const chunkedArr = []
 
@@ -110,27 +173,34 @@ function chunkArray(arr, size) {
   return chunkedArr
 }
 
-const chunkedImages = chunkArray(images, 3)
+// clear out the content initially
+function displayItems(filters) {
+  carousel.innerHTML = ''
 
-for (const track of chunkedImages) {
-  const ul = document.createElement('ul')
-  ul.className = 'carousel__track'
+  const filteredImages = images.filter((image) => filters.includes(image.type))
+  const chunkedImages = chunkArray(filteredImages, 4)
 
-  for (const { image } of track) {
-    const li = document.createElement('li')
-    const img = document.createElement('img')
+  for (const track of chunkedImages) {
+    const ul = document.createElement('ul')
+    ul.className = 'carousel__track'
 
-    img.height = '100'
-    img.width = '100'
-    img.alt = 'slide'
-    img.src = image
-
-    li.append(img)
-    ul.append(li)
+    for (const { image } of track) {
+      const li = document.createElement('li')
+      const img = document.createElement('img')
+      img.height = '100'
+      img.width = '100'
+      img.alt = 'slide'
+      img.src = image
+      li.append(img)
+      ul.append(li)
+    }
+    carousel.append(ul)
   }
-
-  carousel.append(ul)
 }
+
+displayItems(['stripe', 'plain'])
+stripeFilter.addEventListener('click', () => displayItems(['stripe']))
+plainFilter.addEventListener('click', () => displayItems(['plain']))
 
 // tab animation code
 function openCity(evt, cityName) {
@@ -145,14 +215,4 @@ function openCity(evt, cityName) {
   }
   document.getElementById(cityName).style.display = 'block'
   evt.currentTarget.className += ' active'
-}
-
-const checks = document.querySelectorAll('.checkbox')
-const tick1 = document.querySelector('.tick-check')
-
-function checker() {
-  checks.forEach((check) => {
-    tick1.classList.remove('fa-times')
-    if (check.classList.contains('green')) tick1.classList.add('fa-check')
-  })
 }
