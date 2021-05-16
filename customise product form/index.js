@@ -1,8 +1,3 @@
-//change invalide to valide icon
-// function myFunction(x) {
-//   x.classList.toggle('fa-check')
-// }
-
 // change background color when clicking on choice
 let switchBackgroundColor = document.querySelectorAll('.checkbox')
 let switchBackgroundColor1 = document.querySelectorAll('.checkbox1')
@@ -33,6 +28,17 @@ greenButton(switchBackgroundColor2)
 greenButton(switchBackgroundColor3)
 greenButton(switchBackgroundColor4)
 greenButton(switchBackgroundColor5)
+
+// display valid and not valid choices
+const checks = document.querySelectorAll('.checkbox')
+const tick1 = document.querySelector('.tick-check')
+
+function checker() {
+  checks.forEach((check) => {
+    tick1.classList.remove('fa-times')
+    if (check.classList.contains('green')) tick1.classList.add('fa-check')
+  })
+}
 
 // carousel animation
 
