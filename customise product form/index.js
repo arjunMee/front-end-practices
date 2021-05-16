@@ -1,3 +1,8 @@
+//change invalide to valide icon
+function myFunction(x) {
+  x.classList.toggle("fa-check");
+} 
+
 // change background color when clicking on choice
 let switchBackgroundColor = document.querySelectorAll('.checkbox');;
 let switchBackgroundColor1 = document.querySelectorAll('.checkbox1');
@@ -116,7 +121,7 @@ carousel.innerHTML = ""
 // your array of images
 images.forEach(image => {
   const imageElement = document.createElement("img");
-  imageElement.image = image.image;
+  imageElement.src = image.image;
   imageElement.height = "100";
   imageElement.width = "100";
   imageElement.alt = "slide"

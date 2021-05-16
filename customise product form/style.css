@@ -62,6 +62,30 @@ h2 {
     padding-left: 1rem;
 }
 
+.required::before {
+    content:"*";
+    color: red;
+}
+
+i.fa.fa-times:hover {
+    color: rgb(250, 6, 67);
+  }
+
+/*.required::after input[type="text"]:not(:checked) {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00d";
+    color: red;
+    padding: .5rem;
+}
+
+input[type="text"]:checked .required::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00c";
+    color: rgb(0, 255, 0);
+}*/
+
 #legend {
     color: #06c;
     text-transform: uppercase;
