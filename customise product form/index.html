@@ -21,6 +21,10 @@
       integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
       crossorigin="anonymous"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="normalize.css" />
   </head>
@@ -48,9 +52,10 @@
           </div>
           <div class="customize--structure">
             <div class="customize--structure_field">
-              <h4 class="field--title">
+              <h4 class="field--title required">
                 Dimensions <span id="legend">A</span> et
-                <span id="legend">B</span>
+                <span id="legend">B</span
+                ><i onclick="myFunction(this)" class="fa fa-times"></i>
               </h4>
               <input
                 type="text"
@@ -62,7 +67,9 @@
               />
             </div>
             <div class="customize--structure_field">
-              <h4 class="field--title">Couleur de mécanisme</h4>
+              <h4 class="field--title required">
+                Couleur de mécanisme <span id="legend">C</span>
+              </h4>
               <div class="field--select_color choice">
                 <div class="first_color">
                   <img
@@ -71,7 +78,7 @@
                     width="80"
                     height="80"
                   />
-                  <p class="desc1">Orange</p>
+                  <p class="checkbox">Orange</p>
                 </div>
                 <div class="second_color">
                   <img
@@ -80,7 +87,7 @@
                     width="80"
                     height="80"
                   />
-                  <p class="desc1">Gris</p>
+                  <p class="checkbox">Gris</p>
                 </div>
               </div>
             </div>
@@ -96,7 +103,7 @@
                     width="100"
                     height="100"
                   />
-                  <p class="desc2">Grande vague 24 cm</p>
+                  <p class="checkbox1">Grande vague 24 cm</p>
                 </div>
                 <div class="second_shape">
                   <img
@@ -105,7 +112,7 @@
                     width="100"
                     height="100"
                   />
-                  <p class="desc2">Droit 24 cm</p>
+                  <p class="checkbox1">Droit 24 cm</p>
                 </div>
                 <div class="third_shape">
                   <img
@@ -114,7 +121,7 @@
                     width="100"
                     height="100"
                   />
-                  <p class="desc2">Standard/Sans</p>
+                  <p class="checkbox1">Standard/Sans</p>
                 </div>
               </div>
             </div>
@@ -128,7 +135,7 @@
                     width="100"
                     height="100"
                   />
-                  <p class="desc3">Murale sur Façade</p>
+                  <p class="checkbox2">Murale sur Façade</p>
                 </div>
                 <div class="second_fix">
                   <img
@@ -137,12 +144,14 @@
                     width="100"
                     height="100"
                   />
-                  <p class="desc3">Plafond (avec équerres)</p>
+                  <p class="checkbox2">Plafond (avec équerres)</p>
                 </div>
               </div>
             </div>
             <div class="customize--structure_field">
-              <h4 class="field--title required">Personnaliser les bras avec leds</h4>
+              <h4 class="field--title required">
+                Personnaliser les bras avec leds
+              </h4>
               <div class="field--select">
                 <select name="leds" id="choose-leds">
                   <option disabled selected>-- Fiates un choix --</option>
@@ -171,7 +180,7 @@
                       height="60"
                     />
                   </a>
-                  <p class="desc">Uni</p>
+                  <p class="checkbox3">Uni</p>
                 </div>
                 <div class="second_motif">
                   <a href="#">
@@ -182,15 +191,6 @@
                       height="60"
                     />
                   </a>
-                  <p class="desc">Rayures</p>
-                    <img src="assets/toile-motif-uni.jpg" alt="image de motif de couleur uni" width="60" height="60"/>
-                  </a>
-                  <p class="checkbox3">Uni</p>
-                </div>
-                <div class="second_motif">
-                  <a href="#">
-                    <img src="assets/toile-motif-rayures.jpg" alt="image de motif de couleur rayures" width="60" height="60"/>
-                  </a>
                   <p class="checkbox3">Rayures</p>
                 </div>
               </div>
@@ -198,10 +198,406 @@
             <div class="customize--color">
               <h4 class="field--title required">Couleur</h4>
               <div class="carousel choice">
-                <div class="carousel__button carousel__button--left">
+                <div
+                  id="previous-carousel-button"
+                  class="carousel__button carousel__button--left"
+                >
                   <i class="fa fa-chevron-circle-left"></i>
                 </div>
-                <div class="carousel__track-container choice">
+                <div
+                  id="item-carousel"
+                  class="carousel__track-container choice"
+                >
+                  <ul class="carousel__track">
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                  </ul>
+                  <ul class="carousel__track">
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                  </ul>
+                  <ul class="carousel__track">
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                  </ul>
+                  <ul class="carousel__track">
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                  </ul>
+                  <ul class="carousel__track">
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                  </ul>
+                  <ul class="carousel__track">
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                  </ul>
+                  <ul class="carousel__track">
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                  </ul>
+                  <ul class="carousel__track">
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                  </ul>
+                  <ul class="carousel__track">
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                  </ul>
+                  <ul class="carousel__track">
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                  </ul>
+                  <ul class="carousel__track">
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                  </ul>
+                  <ul class="carousel__track">
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                  </ul>
+                  <ul class="carousel__track">
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                  </ul>
+                  <ul class="carousel__track">
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                  </ul>
+                  <ul class="carousel__track">
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        src="assets/gris.jpg"
+                        alt="slide"
+                        width="100"
+                        height="100"
+                      />
+                    </li>
+                  </ul>
                   <ul class="carousel__track">
                     <li class="carousel__slide">
                       <img
@@ -333,7 +729,10 @@
                     </li>
                   </ul>
                 </div>
-                <div class="carousel__button carousel__button--left">
+                <div
+                  id="next-carousel-button"
+                  class="carousel__button carousel__button--left"
+                >
                   <i class="fa fa-chevron-circle-right"></i>
                 </div>
               </div>
@@ -346,7 +745,9 @@
             <h2>personnaliser la motorisation</h2>
           </div>
           <div class="customize--command_field">
-            <h4 class="field--title required">Personnaliser la coté de la commande</h4>
+            <h4 class="field--title required">
+              Personnaliser la coté de la commande
+            </h4>
             <div class="choice">
               <div class="command_direction--left">
                 <img
@@ -355,7 +756,7 @@
                   width="120"
                   height="60"
                 />
-                <p class="desc">Gauche</p>
+                <p class="checkbox4">Gauche</p>
               </div>
               <div class="command_direction--right">
                 <img
@@ -364,15 +765,17 @@
                   width="120"
                   height="60"
                 />
-                <p class="desc">Droite</p>
+                <p class="checkbox4">Droite</p>
               </div>
             </div>
           </div>
           <div class="customize--command_field">
-            <h4 class="field--title required">Personnaliser le type de la commande</h4>
+            <h4 class="field--title required">
+              Personnaliser le type de la commande
+            </h4>
             <div class="command_direction--left">
               <img src="assets/telecommande.jpg" alt="image de telecommande" />
-              <p class="desc">telecommande</p>
+              <p class="checkbox5">telecommande</p>
             </div>
           </div>
         </div>

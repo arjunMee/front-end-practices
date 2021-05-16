@@ -41,6 +41,18 @@ switchBackgroundColor3.forEach((box) => {
     box.classList.add('green')
   })
 })
+switchBackgroundColor4.forEach((box) => {
+  box.addEventListener('click', () => {
+    remove(switchBackgroundColor4)
+    box.classList.add('green')
+  })
+})
+switchBackgroundColor5.forEach((box) => {
+  box.addEventListener('click', () => {
+    remove(switchBackgroundColor5)
+    box.classList.add('green')
+  })
+})
 
 // carousel animation
 
@@ -105,7 +117,7 @@ carousel.innerHTML = ''
 // your array of images
 images.forEach((image) => {
   const imageElement = document.createElement('img')
-  imageElement.image = image.image
+  imageElement.src = image.image
   imageElement.height = '100'
   imageElement.width = '100'
   imageElement.alt = 'slide'
@@ -126,6 +138,3 @@ function openCity(evt, cityName) {
   document.getElementById(cityName).style.display = 'block'
   evt.currentTarget.className += ' active'
 }
-
-// Get the element with id="defaultOpen" and click on it
-// document.getElementById('defaultOpen').click()
