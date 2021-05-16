@@ -1,8 +1,3 @@
-//change invalide to valide icon
-function myFunction(x) {
-  x.classList.toggle("fa-check");
-}
-
 // change background color when clicking on choice
 let switchBackgroundColor = document.querySelectorAll(".checkbox");
 let switchBackgroundColor1 = document.querySelectorAll(".checkbox1");
@@ -11,48 +6,40 @@ let switchBackgroundColor3 = document.querySelectorAll(".checkbox3");
 let switchBackgroundColor4 = document.querySelectorAll(".checkbox4");
 let switchBackgroundColor5 = document.querySelectorAll(".checkbox5");
 
+
 function remove(position) {
   position.forEach((single) => {
-    single.classList.remove("green");
-  });
+    single.classList.remove('green')
+  })
 }
 
-switchBackgroundColor.forEach((box) => {
-  box.addEventListener("click", () => {
-    remove(switchBackgroundColor);
-    box.classList.add("green");
-  });
-});
-switchBackgroundColor1.forEach((box) => {
-  box.addEventListener("click", () => {
-    remove(switchBackgroundColor1);
-    box.classList.add("green");
-  });
-});
-switchBackgroundColor2.forEach((box) => {
-  box.addEventListener("click", () => {
-    remove(switchBackgroundColor2);
-    box.classList.add("green");
-  });
-});
-switchBackgroundColor3.forEach((box) => {
-  box.addEventListener("click", () => {
-    remove(switchBackgroundColor3);
-    box.classList.add("green");
-  });
-});
-switchBackgroundColor4.forEach((box) => {
-  box.addEventListener("click", () => {
-    remove(switchBackgroundColor4);
-    box.classList.add("green");
-  });
-});
-switchBackgroundColor5.forEach((box) => {
-  box.addEventListener("click", () => {
-    remove(switchBackgroundColor5);
-    box.classList.add("green");
-  });
-});
+function greenButton(greenButton) {
+  greenButton.forEach((box) => {
+    box.addEventListener('click', () => {
+      remove(greenButton)
+      box.classList.add('green')
+      checker()
+    })
+  })
+}
+
+greenButton(switchBackgroundColor)
+greenButton(switchBackgroundColor1)
+greenButton(switchBackgroundColor2)
+greenButton(switchBackgroundColor3)
+greenButton(switchBackgroundColor4)
+greenButton(switchBackgroundColor5)
+
+// display valid and not valid choices
+const checks = document.querySelectorAll('.checkbox');
+const tick1 = document.querySelector('.tick-check');
+
+function checker() {
+  checks.forEach((check) => {
+    tick1.classList.remove('fa-times')
+    if (check.classList.contains('green')) tick1.classList.add('fa-check')
+  })
+}
 
 // carousel animation
 

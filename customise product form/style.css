@@ -108,7 +108,7 @@ h2 {
 
 
 #item-carousel {
-    width: 640px;
+    width: 600px;
     overflow-x: scroll;
     scroll-behavior: smooth;
 }
