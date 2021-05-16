@@ -1,7 +1,7 @@
 //change invalide to valide icon
-function myFunction(x) {
-  x.classList.toggle('fa-check')
-}
+// function myFunction(x) {
+//   x.classList.toggle('fa-check')
+// }
 
 // change background color when clicking on choice
 let switchBackgroundColor = document.querySelectorAll('.checkbox')
@@ -17,42 +17,22 @@ function remove(position) {
   })
 }
 
-switchBackgroundColor.forEach((box) => {
-  box.addEventListener('click', () => {
-    remove(switchBackgroundColor)
-    box.classList.add('green')
+function greenButton(greenButton) {
+  greenButton.forEach((box) => {
+    box.addEventListener('click', () => {
+      remove(greenButton)
+      box.classList.add('green')
+      checker()
+    })
   })
-})
-switchBackgroundColor1.forEach((box) => {
-  box.addEventListener('click', () => {
-    remove(switchBackgroundColor1)
-    box.classList.add('green')
-  })
-})
-switchBackgroundColor2.forEach((box) => {
-  box.addEventListener('click', () => {
-    remove(switchBackgroundColor2)
-    box.classList.add('green')
-  })
-})
-switchBackgroundColor3.forEach((box) => {
-  box.addEventListener('click', () => {
-    remove(switchBackgroundColor3)
-    box.classList.add('green')
-  })
-})
-switchBackgroundColor4.forEach((box) => {
-  box.addEventListener('click', () => {
-    remove(switchBackgroundColor4)
-    box.classList.add('green')
-  })
-})
-switchBackgroundColor5.forEach((box) => {
-  box.addEventListener('click', () => {
-    remove(switchBackgroundColor5)
-    box.classList.add('green')
-  })
-})
+}
+
+greenButton(switchBackgroundColor)
+greenButton(switchBackgroundColor1)
+greenButton(switchBackgroundColor2)
+greenButton(switchBackgroundColor3)
+greenButton(switchBackgroundColor4)
+greenButton(switchBackgroundColor5)
 
 // carousel animation
 
@@ -114,15 +94,37 @@ carouselPrevious.onclick = () => {
 // clear out the content initially
 carousel.innerHTML = ''
 
-// your array of images
-images.forEach((image) => {
-  const imageElement = document.createElement('img')
-  imageElement.src = image.image
-  imageElement.height = '100'
-  imageElement.width = '100'
-  imageElement.alt = 'slide'
-  carousel.appendChild(imageElement)
-})
+function chunkArray(arr, size) {
+  const chunkedArr = []
+
+  for (let i = 0; i < arr.length; i += size) {
+    chunkedArr.push(arr.slice(i, i + size))
+  }
+
+  return chunkedArr
+}
+
+const chunkedImages = chunkArray(images, 3)
+
+for (const track of chunkedImages) {
+  const ul = document.createElement('ul')
+  ul.className = 'carousel__track'
+
+  for (const { image } of track) {
+    const li = document.createElement('li')
+    const img = document.createElement('img')
+
+    img.height = '100'
+    img.width = '100'
+    img.alt = 'slide'
+    img.src = image
+
+    li.append(img)
+    ul.append(li)
+  }
+
+  carousel.append(ul)
+}
 
 // tab animation code
 function openCity(evt, cityName) {
@@ -137,4 +139,14 @@ function openCity(evt, cityName) {
   }
   document.getElementById(cityName).style.display = 'block'
   evt.currentTarget.className += ' active'
+}
+
+const checks = document.querySelectorAll('.checkbox')
+const tick1 = document.querySelector('.tick-check')
+
+function checker() {
+  checks.forEach((check) => {
+    tick1.classList.remove('fa-times')
+    if (check.classList.contains('green')) tick1.classList.add('fa-check')
+  })
 }
