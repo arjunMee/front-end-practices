@@ -128,7 +128,7 @@ function chunkArray(arr, size) {
   return chunkedArr;
 }
 
-const chunkedImages = chunkArray(images, 3);
+const chunkedImages = chunkArray(images, 4);
 
 for (const track of chunkedImages) {
 	const ul = document.createElement('ul');
