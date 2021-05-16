@@ -62,19 +62,38 @@ h2 {
     padding-left: 1rem;
 }
 
+#legend {
+    color: #06c;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 .customize--structure_field {
     margin: 6rem auto;
 }
 
-.desc {
+.field--title {
+    margin: 6rem auto 2rem auto;
+}
+
+[class*="checkbox"] {
     font-family: 'Roboto Mono', monospace;
     font-weight: 400;
-    padding: .75rem .5rem;
+    padding: .5rem .5rem;
     cursor: pointer;
 }
 
-.desc:hover {
+[class*="checkbox"]:hover {
     border-bottom: rgb(29, 175, 0) 1px solid;
+}
+
+.checkbox1 {
+    margin-top: 0;
+}
+
+.checkbox5 {
+    width: 20%;
+    margin: 3rem auto 6rem auto
 }
 
 .green {
@@ -83,6 +102,38 @@ h2 {
 }
 
 
+#item-carousel {
+    width: 640px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+.carousel__track {
+    list-style-type: none;
+    margin: 0 auto;
+}
+
+.carousel__track:first-child {
+    padding-left: 0;
+}
+
+.carousel {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.carousel__button {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.carousel__track {
+    padding-left: 20px;
+}
+
+.carousel__slide {
+    margin-bottom: 1rem;
+}
 
 /* Style the buttons inside the tab */
 .tabset > input[type="radio"] {
