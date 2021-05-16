@@ -335,53 +335,61 @@
       </section>
       <!--user contact information-->
       <section class="submit">
-        <form action="">
-          <div class="label-field">
-            <label for="first-name"
-              >Nom*<br />
-              <input
-                type="text"
-                name="first-name"
-                id="first-name"
-                placeholder="Votre Prénom"
-                pattern="[A-Za-zÀ-ž\s]{3,}"
-                maxlength="35"
-                required
-              />
-            </label>
-          </div>
-          <div class="label-field">
-            <label for="last-name"
-              >Prenom*<br />
-              <input
-                type="text"
-                name="last-name"
-                id="lasst-name"
-                placeholder="Votre Nom"
-                pattern="[A-Za-zÀ-ž\s]{3,}"
-                maxlength="35"
-                required
-              />
-            </label>
-          </div>
-          <div class="label-field">
-            <label for="email"
-              >Email*<br />
-              <input
-                type="text"
-                name="email"
-                id="email"
-                placeholder="exp. votremail@gmail.com"
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                maxlength="55"
-                required
-              />
-            </label>
-          </div>
-          <div class="btn">
-            <button class="checking-form--submit">Demandez votre devis</button>
-          </div>
-        </form>
+        <fieldset>
+          <legend>Contacter nous :</legend>
+          <form action="">
+            <div class="label-field">
+              <label for="first-name" class="form--label"
+                >Nom<br />
+                <input
+                  type="text"
+                  name="first-name"
+                  id="first-name"
+                  class="form--input"
+                  placeholder="Votre Prénom"
+                  pattern="[A-Za-zÀ-ž\s]{3,}"
+                  maxlength="35"
+                  required
+                />
+              </label>
+            </div>
+            <div class="label-field">
+              <label for="last-name" class="form--label"
+                >Prenom<br />
+                <input
+                  type="text"
+                  name="last-name"
+                  id="lasst-name"
+                  class="form--input"
+                  placeholder="Votre Nom"
+                  pattern="[A-Za-zÀ-ž\s]{3,}"
+                  maxlength="35"
+                  required
+                />
+              </label>
+            </div>
+            <div class="label-field">
+              <label for="email" class="form--label"
+                >Email<br />
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  class="form--input"
+                  placeholder="exp. votremail@gmail.com"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  maxlength="55"
+                  required
+                />
+              </label>
+            </div>
+            <div class="btn">
+              <button class="checking-form--submit">
+                Demandez votre devis
+              </button>
+            </div>
+          </form>
+        </fieldset>
       </section>
     </main>
     <script src="index.js"></script>
