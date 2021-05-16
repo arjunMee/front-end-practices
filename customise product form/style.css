@@ -73,22 +73,27 @@ h2 {
 }
 
 .field--title {
-    margin-bottom: 3rem;
+    margin: 6rem auto 2rem auto;
 }
 
-[class*="desc"] {
+[class*="checkbox"] {
     font-family: 'Roboto Mono', monospace;
     font-weight: 400;
     padding: .5rem .5rem;
     cursor: pointer;
 }
 
-[class*="desc"]:hover {
+[class*="checkbox"]:hover {
     border-bottom: rgb(29, 175, 0) 1px solid;
 }
 
-.desc1 {
+.checkbox1 {
     margin-top: 0;
+}
+
+.checkbox5 {
+    width: 20%;
+    margin: 3rem auto 6rem auto
 }
 
 .green {
@@ -113,7 +118,8 @@ h2 {
 }
 
 .carousel {
-    width: 100%;
+    width: 75%;
+    margin: 0 auto;
 }
 
 .carousel__button {
