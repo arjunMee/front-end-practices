@@ -118,15 +118,37 @@ carouselPrevious.onclick = () => {
 // clear out the content initially
 carousel.innerHTML = ""
 
-// your array of images
-images.forEach(image => {
-  const imageElement = document.createElement("img");
-  imageElement.src = image.image;
-  imageElement.height = "100";
-  imageElement.width = "100";
-  imageElement.alt = "slide"
-  carousel.appendChild(imageElement);
-})
+function chunkArray(arr, size) {
+  const chunkedArr = [];
+  
+  for(let i = 0; i < arr.length; i += size) {
+    chunkedArr.push(arr.slice(i, i + size));
+  }
+  
+  return chunkedArr;
+}
+
+const chunkedImages = chunkArray(images, 3);
+
+for (const track of chunkedImages) {
+	const ul = document.createElement('ul');
+  ul.className = 'carousel__track';
+    
+	for (const { image } of track) {
+  	const li = document.createElement('li');
+    const img = document.createElement('img');
+
+    img.height = "100";
+    img.width = "100";
+    img.alt = "slide"
+    img.src = image;
+
+		li.append(img);
+    ul.append(li);
+  }
+  
+  carousel.append(ul);
+}
 
 
 // tab animation code
