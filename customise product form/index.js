@@ -91,9 +91,6 @@ carouselPrevious.onclick = () => {
   carousel.scrollLeft -= parseInt(width)
 }
 
-// clear out the content initially
-carousel.innerHTML = ''
-
 function chunkArray(arr, size) {
   const chunkedArr = []
 
@@ -104,27 +101,34 @@ function chunkArray(arr, size) {
   return chunkedArr
 }
 
-const chunkedImages = chunkArray(images, 3)
+// clear out the content initially
+function displayItems(filters) {
+  carousel.innerHTML = ''
 
-for (const track of chunkedImages) {
-  const ul = document.createElement('ul')
-  ul.className = 'carousel__track'
+  const filteredImages = images.filter((image) => filters.includes(image.type))
+  const chunkedImages = chunkArray(filteredImages, 4)
 
-  for (const { image } of track) {
-    const li = document.createElement('li')
-    const img = document.createElement('img')
+  for (const track of chunkedImages) {
+    const ul = document.createElement('ul')
+    ul.className = 'carousel__track'
 
-    img.height = '100'
-    img.width = '100'
-    img.alt = 'slide'
-    img.src = image
-
-    li.append(img)
-    ul.append(li)
+    for (const { image } of track) {
+      const li = document.createElement('li')
+      const img = document.createElement('img')
+      img.height = '100'
+      img.width = '100'
+      img.alt = 'slide'
+      img.src = image
+      li.append(img)
+      ul.append(li)
+    }
+    carousel.append(ul)
   }
-
-  carousel.append(ul)
 }
+
+displayItems(['stripe', 'plain'])
+stripeFilter.addEventListener('click', () => displayItems(['stripe']))
+plainFilter.addEventListener('click', () => displayItems(['plain']))
 
 // tab animation code
 function openCity(evt, cityName) {
@@ -139,14 +143,4 @@ function openCity(evt, cityName) {
   }
   document.getElementById(cityName).style.display = 'block'
   evt.currentTarget.className += ' active'
-}
-
-const checks = document.querySelectorAll('.checkbox')
-const tick1 = document.querySelector('.tick-check')
-
-function checker() {
-  checks.forEach((check) => {
-    tick1.classList.remove('fa-times')
-    if (check.classList.contains('green')) tick1.classList.add('fa-check')
-  })
 }
