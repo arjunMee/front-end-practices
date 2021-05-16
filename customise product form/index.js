@@ -116,7 +116,33 @@ carouselPrevious.onclick = () => {
 
 
 // clear out the content initially
-carousel.innerHTML = ""
+function displayItems(filters) {
+  carousel.innerHTML = "";
+
+  const filteredImages = images.filter(image => filters.includes(image.type));
+  const chunkedImages = chunkArray(filteredImages, 3);
+  
+
+  for (const track of chunkedImages) {
+    const ul = document.createElement("ul");
+    ul.className = "carousel__track";
+   
+  for (const { image } of track) {
+    const li = document.createElement("li");
+    const img = document.createElement("img");
+    img.height = "100";
+    img.width = "100";
+    img.alt = "slide";
+    img.src = image;
+    li.append(img);
+    ul.append(li);
+  }
+  carousel.append(ul);
+  }
+  displayItems(["stripe", "plain"])
+}
+
+/*carousel.innerHTML = ""
 
 function chunkArray(arr, size) {
   const chunkedArr = [];
@@ -148,7 +174,7 @@ for (const track of chunkedImages) {
   }
   
   carousel.append(ul);
-}
+}*/
 
 
 // tab animation code
