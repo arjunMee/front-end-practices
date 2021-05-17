@@ -1,11 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Store Devis</title>
-    <link rel="icon" type="assets/png" href="assets/favicon-32x32.png"/>
+    <link rel="icon" type="assets/png" href="assets/favicon-32x32.png" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;500;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,500;1,400&display=swap" rel="stylesheet"/>
@@ -29,15 +30,21 @@
         <div class="customize--sub_categorie">
           <div class="customize--sub_title">
             <p class="symbol">1</p>
-            <h2>personnaliser la structure</h2>
+            <h2 class="customize--title">personnaliser la structure</h2>
           </div>
           <div class="customize--structure">
             <div class="customize--structure_field">
-              <h4 class="field--title required">Dimensions <span id="legend">A</span> et <span id="legend">B</span><i class="fa fa-times tick-check"></i></h4>
+              <h4 class="field--title required">
+                Dimensions <span id="legend">A</span> et
+                <span id="legend">B</span>
+              </h4>
               <input type="text" name="mesures" id="mesures" placeholder="Exp: 2000 x 1100" maxlength="11" required/>
             </div>
             <div class="customize--structure_field">
-              <h4 class="field--title required">Couleur de mécanisme <span id="legend">C</span><i class="fas fa-times tick-check"></i></h4>
+              <h4 class="field--title required">
+                Couleur de mécanisme <span id="legend">C</span
+                ><i class="fas fa-times tick-check"></i>
+              </h4>
               <div class="field--select_color choice">
                 <div class="first_color">
                   <img src="assets/orange.png" alt="image de couleur orange" width="80" height="80"/>
@@ -51,11 +58,12 @@
             </div>
             <div class="customize--structure_field">
               <h4 class="field--title required">
-                Personnaliser le lamberquin <span id="legend">D</span><i class="fas fa-times tick-check"></i>
+                Personnaliser le lamberquin <span id="legend">D</span
+                ><i class="fas fa-times tick-check1"></i>
               </h4>
               <div class="field--select_shape choice">
                 <div class="first_shape">
-                  <img src="assets/lambrequin-icon-vague.png" alt="image de store avec lamberquin forme de vague" width="100" height="100">
+                  <img src="assets/lambrequin-icon-vague.png" alt="image de store avec lamberquin forme de vague" width="100" height="100"/>
                   <p class="checkbox1">Grande vague 24 cm</p>
                 </div>
                 <div class="second_shape">
@@ -69,7 +77,7 @@
               </div>
             </div>
             <div class="customize--structure_field">
-              <h4 class="field--title required">Personnaliser la Fixation<i class="fas fa-times tick-check"></i></h4>
+              <h4 class="field--title required">Personnaliser la Fixation<i class="fas fa-times tick-check2"></i></h4>
               <div class="choice">
                 <div class="first_fix">
                   <img src="assets/fixation-mur.png" alt="image de fixation store au mur" width="100" height="100"/>
@@ -82,7 +90,9 @@
               </div>
             </div>
             <div class="customize--structure_field">
-              <h4 class="field--title required">Personnaliser les bras avec leds<i class="fas fa-times tick-check"></i></h4>
+              <h4 class="field--title required">
+                Personnaliser les bras avec leds
+              </h4>
               <div class="field--select">
                 <select name="leds" id="choose-leds">
                   <option disabled selected>-- Fiates un choix --</option>
@@ -96,34 +106,35 @@
         <div class="customize--sub_categorie">
           <div class="customize--sub_title">
             <p class="symbol">2</p>
-            <h2>personnaliser la toile</h2>
+            <h2 class="customize--title">personnaliser la toile</h2>
           </div>
           <div class="customize--motif_field">
             <div class="customize--motif">
-              <h4 class="field--title required">Motif<i class="fas fa-times tick-check"></i></h4>
+              <h4 class="field--title required">
+                Motif<i class="fas fa-times tick-check3"></i>
+              </h4>
               <div class="customize--motif_categories choice">
                 <div class="first_motif">
-                  <button id="plain">
+                  <div id="plain">
                     <img src="assets/toile-motif-uni.jpg" alt="image de motif de couleur uni" width="60" height="60"/>
-                  </button>
+                  </div>
                   <p class="checkbox3">Uni</p>
                 </div>
                 <div class="second_motif">
-                  <button id="stripe">
+                  <div id="stripe">
                     <img src="assets/toile-motif-rayures.jpg" alt="image de motif de couleur rayures" width="60" height="60"/>
-                  </button>
+                  </div>
                   <p class="checkbox3">Rayures</p>
                 </div>
               </div>
             </div>
             <div class="customize--color">
-              <h4 class="field--title required">Couleur<i class="fas fa-times tick-check"></i></h4>
+              <h4 class="field--title">Couleur</h4>
               <div class="carousel choice">
                 <div id="previous-carousel-button" class="carousel__button carousel__button--left">
                   <i class="fa fa-chevron-circle-left"></i>
                 </div>
-                <div id="item-carousel" class="carousel__track-container choice">
-                </div>
+                <div id="item-carousel" class="carousel__track-container choice"></div>
                 <div id="next-carousel-button" class="carousel__button carousel__button--left">
                   <i class="fa fa-chevron-circle-right"></i>
                 </div>
@@ -134,10 +145,10 @@
         <div class="customize--sub_categorie">
           <div class="customize--sub_title">
             <p class="symbol">3</p>
-            <h2>personnaliser la motorisation</h2>
+            <h2 id="wrap_title" class="customize--title">personnaliser la motorisation</h2>
           </div>
           <div class="customize--command_field">
-            <h4 class="field--title required">Personnaliser la coté de la commande<i class="fas fa-times tick-check"></i></h4>
+            <h4 class="field--title required">Personnaliser la coté de la commande<i class="fas fa-times tick-check4"></i></h4>
             <div class="choice">
               <div class="command_direction--left">
                 <img src="assets/commande-gauche.png" alt="image de telecommande coté gauche" width="120" height="60"/>
@@ -150,9 +161,9 @@
             </div>
           </div>
           <div class="customize--command_field">
-            <h4 class="field--title required">Personnaliser le type de la commande<i class="fas fa-times tick-check"></i></h4>
+            <h4 class="field--title required">Personnaliser le type de la commande<i class="fas fa-times tick-check5"></i></h4>
             <div class="command_direction--left">
-              <img src="assets/telecommande.jpg" alt="image de telecommande" />
+              <img src="assets/telecommande.jpg" alt="image de telecommande"/>
               <p class="checkbox5">telecommande</p>
             </div>
           </div>
@@ -169,7 +180,7 @@
           <!-- Tab 3 -->
           <input type="radio" name="tabset" id="tab3" aria-controls="description3"/>
           <label for="tab3">Description 3</label>
-
+          <!--Tabs content-->
           <div class="tab-panels">
             <section id="description1" class="tab-panel">
               <h2>1. Tab</h2>
@@ -206,21 +217,21 @@
       </section>
       <!--user contact information-->
       <section class="submit">
-        <fieldset>
+        <fieldset class="fieldset-border">
           <legend>Contacter nous :</legend>
           <form action="">
             <div class="label-field">
-              <label for="first-name" class="form--label">Nom<br>
+              <label for="first-name" class="form--label">Nom<br />
                 <input type="text" name="first-name" id="first-name" class="form--input" placeholder="Votre Prénom" pattern="[A-Za-zÀ-ž\s]{3,}" maxlength="35" required/>
               </label>
             </div>
             <div class="label-field">
-              <label for="last-name" class="form--label">Prenom<br>
+              <label for="last-name" class="form--label">Prenom<br />
                 <input type="text" name="last-name" id="lasst-name" class="form--input" placeholder="Votre Nom" pattern="[A-Za-zÀ-ž\s]{3,}" maxlength="35" required/>
               </label>
             </div>
             <div class="label-field">
-              <label for="email" class="form--label">Email<br>
+              <label for="email" class="form--label">Email<br />
                 <input type="text" name="email" id="email" class="form--input" placeholder="exp. votremail@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" maxlength="55" required/>
               </label>
             </div>
