@@ -48,13 +48,13 @@
         <div class="customize--sub_categorie">
           <div class="customize--sub_title">
             <p class="symbol">1</p>
-            <h2>personnaliser la structure</h2>
+            <h2 class="customize--title">personnaliser la structure</h2>
           </div>
           <div class="customize--structure">
             <div class="customize--structure_field">
               <h4 class="field--title required">
                 Dimensions <span id="legend">A</span> et
-                <span id="legend">B</span><i class="fa fa-times"></i>
+                <span id="legend">B</span>
               </h4>
               <input
                 type="text"
@@ -127,8 +127,11 @@
               </div>
             </div>
             <div class="customize--structure_field">
-              <h4 class="field--title required">Personnaliser la Fixation</h4>
-              <i class="fas fa-times tick-check2"></i>
+              <h4 class="field--title required">
+                Personnaliser la Fixation<i
+                  class="fas fa-times tick-check2"
+                ></i>
+              </h4>
               <div class="choice">
                 <div class="first_fix">
                   <img
@@ -152,9 +155,7 @@
             </div>
             <div class="customize--structure_field">
               <h4 class="field--title required">
-                Personnaliser les bras avec leds<i
-                  class="fas fa-times tick-check"
-                ></i>
+                Personnaliser les bras avec leds
               </h4>
               <div class="field--select">
                 <select name="leds" id="choose-leds">
@@ -169,7 +170,7 @@
         <div class="customize--sub_categorie">
           <div class="customize--sub_title">
             <p class="symbol">2</p>
-            <h2>personnaliser la toile</h2>
+            <h2 class="customize--title">personnaliser la toile</h2>
           </div>
           <div class="customize--motif_field">
             <div class="customize--motif">
@@ -178,33 +179,31 @@
               </h4>
               <div class="customize--motif_categories choice">
                 <div class="first_motif">
-                  <button id="plain">
+                  <div id="plain">
                     <img
                       src="assets/toile-motif-uni.jpg"
                       alt="image de motif de couleur uni"
                       width="60"
                       height="60"
                     />
-                  </button>
+                  </div>
                   <p class="checkbox3">Uni</p>
                 </div>
                 <div class="second_motif">
-                  <button id="stripe">
+                  <div id="stripe">
                     <img
                       src="assets/toile-motif-rayures.jpg"
                       alt="image de motif de couleur rayures"
                       width="60"
                       height="60"
                     />
-                  </button>
+                  </div>
                   <p class="checkbox3">Rayures</p>
                 </div>
               </div>
             </div>
             <div class="customize--color">
-              <h4 class="field--title required">
-                Couleur<i class="fas fa-times tick-check"></i>
-              </h4>
+              <h4 class="field--title">Couleur</h4>
               <div class="carousel choice">
                 <div
                   id="previous-carousel-button"
@@ -229,7 +228,9 @@
         <div class="customize--sub_categorie">
           <div class="customize--sub_title">
             <p class="symbol">3</p>
-            <h2>personnaliser la motorisation</h2>
+            <h2 id="wrap_title" class="customize--title">
+              personnaliser la motorisation
+            </h2>
           </div>
           <div class="customize--command_field">
             <h4 class="field--title required">
@@ -298,7 +299,7 @@
             aria-controls="description3"
           />
           <label for="tab3">Description 3</label>
-
+          <!--Tabs content-->
           <div class="tab-panels">
             <section id="description1" class="tab-panel">
               <h2>1. Tab</h2>
@@ -335,7 +336,7 @@
       </section>
       <!--user contact information-->
       <section class="submit">
-        <fieldset>
+        <fieldset class="fieldset-border">
           <legend>Contacter nous :</legend>
           <form action="">
             <div class="label-field">

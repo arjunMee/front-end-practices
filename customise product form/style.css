@@ -19,14 +19,20 @@ body {
   padding: 0;
   position: relative;
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 1rem;
+  font-size: 1em;
+  max-width: 100%;
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   background-color: #fff;
-  width: 60%;
+  width: 65%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2em;
 }
 
 .intro {
@@ -34,7 +40,7 @@ main {
 }
 
 .customize {
-  text-align: center !important;
+  text-align: center;
 }
 
 .choice {
@@ -47,7 +53,12 @@ main {
   margin: 5rem auto;
   text-transform: uppercase;
   display: flex;
-  white-space: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#mesures {
+  width: 50%;
 }
 
 .symbol {
@@ -56,10 +67,14 @@ main {
   padding: 0.5rem 0.75rem;
   font-weight: 700;
   background-color: rgb(243, 223, 42);
+  width: 40px;
+  height: 40px;
 }
 
-h2 {
-  padding-left: 1rem;
+.customize--title {
+  padding-left: 0.5rem;
+  font-size: 1.4rem;
+  white-space: nowrap;
 }
 
 .required::before {
@@ -70,6 +85,11 @@ h2 {
 .fa-times {
   color: rgb(196, 25, 20);
   padding-left: 0.5rem;
+}
+
+.fa-check {
+  padding-left: 0.5rem;
+  color: rgb(29, 175, 0);
 }
 
 #legend {
@@ -102,8 +122,10 @@ h2 {
 }
 
 .checkbox5 {
-  width: 20%;
   margin: 3rem auto 6rem auto;
+  text-align: center;
+  padding: 0.8em auto;
+  width: 150px;
 }
 
 .green {
@@ -115,6 +137,11 @@ h2 {
   width: 600px;
   overflow-x: scroll;
   scroll-behavior: smooth;
+}
+
+#plain,
+#stripe {
+  cursor: pointer;
 }
 
 .carousel__track {
@@ -201,18 +228,25 @@ h2 {
 }
 
 .tab-panel {
-  padding: 30px 0;
+  padding: 30px 20px;
   border-top: 1px solid #ccc;
 }
 
+.tab-panel p {
+  line-height: 1.5;
+}
+
 .submit {
+  display: flex;
   margin: 8rem auto 6rem auto;
-  width: 70%;
+  width: 60%;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
 }
 
 .label-field {
   margin: 2rem auto;
-  width: 100%;
 }
 
 .form--label::before {
@@ -225,7 +259,7 @@ h2 {
 
 .form--input {
   margin-top: 0.8rem;
-  padding: 5rem auto;
+  width: 100%;
 }
 
 .form--input:hover,
@@ -255,4 +289,70 @@ h2 {
 
 .btn:hover .checking-form--submit {
   background-color: rgb(29, 175, 0);
+}
+
+@media (max-width: 800px) {
+  main {
+    display: flex;
+    padding: 1em;
+    width: 80%;
+  }
+
+  .customize--title {
+    font-size: 1.15em;
+    text-align: left;
+    white-space: pre-line;
+  }
+
+  .carousel {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .tabset {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .submit {
+    width: 80%;
+  }
+
+  .form--input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  main {
+    padding: 0.2rem;
+    width: 95%;
+  }
+
+  .customize--title {
+    font-size: 1.05em;
+    padding-left: 0.5rem;
+  }
+
+  #mesures {
+    width: 80%;
+  }
+
+  .carousel {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .tabset {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .submit {
+    width: 90%;
+  }
+
+  .form--input {
+    width: 100%;
+  }
 }
