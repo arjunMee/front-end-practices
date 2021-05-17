@@ -4,7 +4,7 @@
 
 ### About the project:
 
-This project is an attempt to build a responsive webpage that helps the client to customize a product before purchase it. Build with HTML, CSS, and JavaScript with the contribute of [arjunMee](https://github.com/arjunMee) and [Krishna Rowter](https://github.com/krowter).
+This project is an attempt to build a responsive webpage that helps the client to customize a product before purchase it. Build with HTML, CSS, and JavaScript with the contribution of [arjunMee](https://github.com/arjunMee) and [Krishna Rowter](https://github.com/krowter).
 
 
 ### Screenshot:
