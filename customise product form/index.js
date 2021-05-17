@@ -37,7 +37,7 @@ greenButton(switchBackgroundColor5)
 // display valid and not valid choices
 const checks = document.querySelectorAll('.checkbox')
 const tick = document.querySelector('.tick-check')
-console.log(checks, tick)
+
 function checker() {
   checks.forEach((check) => {
     if (check.classList.contains('green')) {
@@ -103,6 +103,20 @@ function checker5() {
     }
   })
 }
+
+const tick0 = document.querySelector('.tick-check0')
+const dropdown = document.getElementById('subject')
+
+dropdown.addEventListener('click', () => {
+  console.log(dropdown.value === '0')
+  if (dropdown.value === '0') {
+    return
+  } else {
+    tick0.classList.remove('fa-times')
+    tick0.classList.add('fa-check')
+  }
+})
+// dropdown.children.map((drop) => {})
 
 // carousel animation
 
