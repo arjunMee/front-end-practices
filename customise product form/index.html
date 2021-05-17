@@ -59,7 +59,7 @@
               </h4>
               <form>
                 <select name="subject" id="subject">
-                  <option value="0">choose any of it</option>
+                  <option value="0" disabled selected>choose any of it</option>
                   <option value="1">2000 x 1900 mm</option>
                   <option value="2">2000 x 1900 mm</option>
                   <option value="3">2000 x 1900 mm</option>
@@ -159,12 +159,15 @@
             <div class="customize--structure_field">
               <h4 class="field--title required">
                 Personnaliser les bras avec leds
+                <i class="fas fa-times tick-check00"></i>
               </h4>
               <div class="field--select">
                 <select name="leds" id="choose-leds">
-                  <option disabled selected>-- Fiates un choix --</option>
-                  <option>Sans</option>
-                  <option>Leds intégrés sur les bras +499€</option>
+                  <option value="0" disabled selected>
+                    -- Fiates un choix --
+                  </option>
+                  <option value="1">Sans</option>
+                  <option value="2">Leds intégrés sur les bras +499€</option>
                 </select>
               </div>
             </div>
